@@ -1,0 +1,365 @@
+
+> my-app-name@0.1.0 develop
+> strapi develop
+
+
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+Setting up the template...
+Ready to go
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:40:51 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 3957 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 13092                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2024-07-27 06:40:53.013] [32mhttp[39m: GET /admin (11 ms) 200
+[2024-07-27 06:40:53.040] [32mhttp[39m: GET /admin/runtime~main.4ee5daf5.js (4 ms) 200
+[2024-07-27 06:40:53.043] [32mhttp[39m: GET /admin/main.dd6514d7.js (1 ms) 200
+[2024-07-27 06:40:53.259] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2024-07-27 06:40:53.266] [32mhttp[39m: GET /admin/8657.da0aa536.chunk.js (1 ms) 200
+[2024-07-27 06:40:53.274] [32mhttp[39m: GET /admin/7542.7a33e8c1.chunk.js (3 ms) 200
+[2024-07-27 06:40:53.274] [32mhttp[39m: GET /admin/7410.0172259a.chunk.js (2 ms) 200
+[2024-07-27 06:40:53.291] [32mhttp[39m: GET /admin/1047.aa3d7ee4.chunk.js (3 ms) 200
+[2024-07-27 06:40:53.291] [32mhttp[39m: GET /admin/4658.b7b29526.chunk.js (2 ms) 200
+[2024-07-27 06:40:53.295] [32mhttp[39m: GET /admin/3392.9b5a12b3.chunk.js (2 ms) 200
+[2024-07-27 06:40:53.296] [32mhttp[39m: GET /admin/159.3ee9f1fc.chunk.js (2 ms) 200
+[2024-07-27 06:40:53.299] [32mhttp[39m: GET /admin/4495.d38c1d02.chunk.js (2 ms) 200
+[2024-07-27 06:40:53.299] [32mhttp[39m: GET /admin/4306.4ee77654.chunk.js (1 ms) 200
+[2024-07-27 06:40:53.329] [32mhttp[39m: GET /admin/init (4 ms) 200
+[2024-07-27 06:41:29.284] [32mhttp[39m: POST /admin/register-admin (88 ms) 200
+[2024-07-27 06:41:29.326] [32mhttp[39m: GET /admin/users/me (17 ms) 200
+[2024-07-27 06:41:29.338] [32mhttp[39m: GET /admin/project-settings (27 ms) 200
+[2024-07-27 06:41:29.339] [32mhttp[39m: GET /admin/5704.abbc857e.chunk.js (31 ms) 200
+[2024-07-27 06:41:29.372] [32mhttp[39m: GET /admin/users/me/permissions (20 ms) 200
+[2024-07-27 06:41:29.373] [32mhttp[39m: GET /admin/information (22 ms) 200
+[2024-07-27 06:41:29.391] [32mhttp[39m: GET /i18n/locales (10 ms) 200
+[2024-07-27 06:41:29.406] [32mhttp[39m: GET /admin/5337.2f81f832.chunk.js (1 ms) 200
+[2024-07-27 06:41:29.425] [32mhttp[39m: GET /content-manager/components (10 ms) 200
+[2024-07-27 06:41:29.436] [32mhttp[39m: GET /content-manager/content-types (10 ms) 200
+[2024-07-27 06:41:37.058] [32mhttp[39m: GET /content-manager/init (11 ms) 200
+[2024-07-27 06:41:37.098] [32mhttp[39m: GET /content-manager/content-types-settings (19 ms) 200
+[2024-07-27 06:41:37.126] [32mhttp[39m: GET /content-manager/content-types/api::about.about/configuration (12 ms) 200
+[2024-07-27 06:41:37.165] [32mhttp[39m: GET /content-manager/single-types/api::about.about/ (17 ms) 200
+[2024-07-27 06:41:37.235] [32mhttp[39m: GET /uploads/thumbnail_coffee_art_5faff77b12.jpg (2 ms) 200
+[2024-07-27 06:41:41.275] [32mhttp[39m: GET /content-manager/content-types/api::article.article/configuration (13 ms) 200
+[2024-07-27 06:41:41.334] [32mhttp[39m: GET /content-manager/collection-types/api::article.article?page=1&pageSize=10&sort=title:ASC (21 ms) 200
+[2024-07-27 06:42:04.105] [32mhttp[39m: GET /content-manager/content-types/api::category.category/configuration (10 ms) 200
+[2024-07-27 06:42:04.136] [32mhttp[39m: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name:ASC (14 ms) 200
+[2024-07-27 06:42:04.256] [32mhttp[39m: GET /content-manager/content-types/plugin::users-permissions.user/configuration (10 ms) 200
+[2024-07-27 06:42:04.284] [32mhttp[39m: GET /content-manager/collection-types/plugin::users-permissions.user?page=1&pageSize=10&sort=username:ASC (10 ms) 200
+[2024-07-27 06:42:05.477] [32mhttp[39m: GET /content-manager/content-types/api::category.category/configuration (9 ms) 200
+[2024-07-27 06:42:05.488] [32mhttp[39m: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name:ASC (10 ms) 200
+[2024-07-27 06:42:06.343] [32mhttp[39m: GET /content-manager/content-types/api::author.author/configuration (9 ms) 200
+[2024-07-27 06:42:06.374] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=10&sort=name:ASC (12 ms) 200
+[2024-07-27 06:42:06.386] [32mhttp[39m: GET /uploads/thumbnail_sarahbaker_strapi_679e2d0258.jpg (0 ms) 200
+[2024-07-27 06:42:06.387] [32mhttp[39m: GET /uploads/thumbnail_daviddoe_strapi_71870aa308.jpg (3 ms) 200
+[2024-07-27 06:42:09.558] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=1&sort=name:ASC&filters[id][$in][0]=2 (13 ms) 200
+[2024-07-27 06:42:09.570] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=10&sort=name:ASC (11 ms) 200
+[2024-07-27 06:42:10.890] [32mhttp[39m: DELETE /content-manager/collection-types/api::author.author/2 (30 ms) 200
+[2024-07-27 06:42:10.911] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=10&sort=name:ASC (11 ms) 200
+[2024-07-27 06:42:11.834] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=10&sort=name:ASC (13 ms) 200
+[2024-07-27 06:42:11.845] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=1&sort=name:ASC&filters[id][$in][0]=1 (11 ms) 200
+[2024-07-27 06:42:11.860] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=10&sort=name:ASC (10 ms) 200
+[2024-07-27 06:42:11.861] [32mhttp[39m: GET /uploads/thumbnail_daviddoe_strapi_71870aa308.jpg (12 ms) 200
+[2024-07-27 06:42:12.911] [32mhttp[39m: DELETE /content-manager/collection-types/api::author.author/1 (26 ms) 200
+[2024-07-27 06:42:12.928] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=10&sort=name:ASC (9 ms) 200
+[2024-07-27 06:42:28.244] [32mhttp[39m: GET /content-manager/content-types/api::article.article/configuration (10 ms) 200
+[2024-07-27 06:42:28.263] [32mhttp[39m: GET /content-manager/collection-types/api::article.article?page=1&pageSize=10&sort=title:ASC (18 ms) 200
+[2024-07-27 06:42:28.863] [32mhttp[39m: GET /content-manager/content-types/api::author.author/configuration (8 ms) 200
+[2024-07-27 06:42:28.872] [32mhttp[39m: GET /content-manager/collection-types/api::author.author?page=1&pageSize=10&sort=name:ASC (8 ms) 200
+[2024-07-27 06:42:35.652] [32mhttp[39m: GET /admin/6096.29153138.chunk.js (1 ms) 200
+[2024-07-27 06:42:35.674] [32mhttp[39m: GET /content-type-builder/components (9 ms) 200
+[2024-07-27 06:42:35.692] [32mhttp[39m: GET /content-type-builder/content-types (10 ms) 200
+[2024-07-27 06:42:35.701] [32mhttp[39m: GET /content-type-builder/reserved-names (7 ms) 200
+[2024-07-27 06:42:35.714] [32mhttp[39m: GET /admin/2105.b7555a90.chunk.js (1 ms) 200
+[2024-07-27 06:42:44.381] [32minfo[39m: File changed: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\author\content-types\author\schema.json
+[2024-07-27 06:42:44.382] [32minfo[39m: File changed: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\category\content-types\category\schema.json
+[2024-07-27 06:42:44.404] [32mhttp[39m: DELETE /content-type-builder/content-types/api::article.article (53 ms) 200
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:42:48 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1894 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 15760                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:42:48.195] [32mhttp[39m: HEAD /_health (6 ms) 204
+[2024-07-27 06:42:48.244] [32mhttp[39m: GET /admin/users/me/permissions (23 ms) 200
+[2024-07-27 06:42:48.279] [32mhttp[39m: GET /content-type-builder/components (8 ms) 200
+[2024-07-27 06:42:48.291] [32mhttp[39m: GET /content-type-builder/content-types (10 ms) 200
+[2024-07-27 06:42:48.300] [32mhttp[39m: GET /content-type-builder/reserved-names (7 ms) 200
+[2024-07-27 06:42:58.078] [32mhttp[39m: DELETE /content-type-builder/content-types/api::author.author (38 ms) 200
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:43:01 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1657 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 17852                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:43:01.639] [32mhttp[39m: HEAD /_health (7 ms) 204
+[2024-07-27 06:43:01.675] [32mhttp[39m: GET /admin/users/me/permissions (22 ms) 200
+[2024-07-27 06:43:01.702] [32mhttp[39m: GET /content-type-builder/components (9 ms) 200
+[2024-07-27 06:43:01.714] [32mhttp[39m: GET /content-type-builder/content-types (10 ms) 200
+[2024-07-27 06:43:01.723] [32mhttp[39m: GET /content-type-builder/reserved-names (7 ms) 200
+[2024-07-27 06:43:09.469] [32mhttp[39m: DELETE /content-type-builder/content-types/api::category.category (39 ms) 200
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:43:12 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1647 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 14424                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:43:13.022] [32mhttp[39m: HEAD /_health (7 ms) 204
+[2024-07-27 06:43:13.057] [32mhttp[39m: GET /admin/users/me/permissions (21 ms) 200
+[2024-07-27 06:43:13.087] [32mhttp[39m: GET /content-type-builder/components (12 ms) 200
+[2024-07-27 06:43:13.097] [32mhttp[39m: GET /content-type-builder/content-types (8 ms) 200
+[2024-07-27 06:43:13.105] [32mhttp[39m: GET /content-type-builder/reserved-names (6 ms) 200
+[2024-07-27 06:43:20.873] [32minfo[39m: File changed: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\about\content-types\about\schema.json
+[2024-07-27 06:43:20.875] [32mhttp[39m: DELETE /content-type-builder/components/shared.media (14 ms) 200
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:43:24 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1528 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 18404                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:43:24.406] [32mhttp[39m: HEAD /_health (7 ms) 204
+[2024-07-27 06:43:24.441] [32mhttp[39m: GET /admin/users/me/permissions (22 ms) 200
+[2024-07-27 06:43:31.744] [32minfo[39m: File changed: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\about\content-types\about\schema.json
+[2024-07-27 06:43:31.747] [32mhttp[39m: DELETE /content-type-builder/components/shared.slider (15 ms) 200
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:43:35 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1511 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 16916                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:43:35.293] [32mhttp[39m: HEAD /_health (7 ms) 204
+[2024-07-27 06:43:35.330] [32mhttp[39m: GET /admin/users/me/permissions (25 ms) 200
+[2024-07-27 06:43:40.451] [32mhttp[39m: DELETE /content-type-builder/components/shared.media (11 ms) 404
+[2024-07-27 06:43:54.981] [32mhttp[39m: DELETE /content-type-builder/content-types/api::global.global (44 ms) 200
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:43:58 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1606 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 4996                                             [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:43:58.437] [32mhttp[39m: HEAD /_health (7 ms) 204
+[2024-07-27 06:43:58.475] [32mhttp[39m: GET /admin/users/me/permissions (20 ms) 200
+[2024-07-27 06:43:58.514] [32mhttp[39m: GET /content-type-builder/components (9 ms) 200
+[2024-07-27 06:43:58.525] [32mhttp[39m: GET /content-type-builder/content-types (10 ms) 200
+[2024-07-27 06:43:58.533] [32mhttp[39m: GET /content-type-builder/reserved-names (7 ms) 200
+[2024-07-27 06:44:03.514] [32mhttp[39m: DELETE /content-type-builder/content-types/api::about.about (36 ms) 200
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:44:06 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1602 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 16920                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:44:07.061] [32mhttp[39m: HEAD /_health (6 ms) 204
+[2024-07-27 06:44:07.095] [32mhttp[39m: GET /admin/users/me/permissions (20 ms) 200
+[2024-07-27 06:44:07.124] [32mhttp[39m: GET /content-type-builder/components (10 ms) 200
+[2024-07-27 06:44:07.136] [32mhttp[39m: GET /content-type-builder/content-types (10 ms) 200
+[2024-07-27 06:44:07.144] [32mhttp[39m: GET /content-type-builder/reserved-names (6 ms) 200
+[2024-07-27 06:48:55.921] [32minfo[39m: File created: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\restaurant\controllers\restaurant.js
+[2024-07-27 06:48:55.925] [32minfo[39m: File created: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\restaurant\content-types\restaurant\schema.json
+[2024-07-27 06:48:55.929] [32minfo[39m: File created: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\restaurant\services\restaurant.js
+[2024-07-27 06:48:55.935] [32minfo[39m: File created: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\restaurant\routes\restaurant.js
+[2024-07-27 06:48:55.935] [32minfo[39m: File changed: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\restaurant\content-types\restaurant\schema.json
+[2024-07-27 06:48:55.936] [32mhttp[39m: POST /content-type-builder/content-types (662 ms) 201
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:48:59 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1806 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 10912                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:48:59.694] [32mhttp[39m: HEAD /_health (6 ms) 204
+[2024-07-27 06:48:59.732] [32mhttp[39m: GET /content-type-builder/components (21 ms) 200
+[2024-07-27 06:48:59.746] [32mhttp[39m: GET /content-type-builder/content-types (10 ms) 200
+[2024-07-27 06:48:59.755] [32mhttp[39m: GET /content-type-builder/reserved-names (7 ms) 200
+[2024-07-27 06:48:59.786] [32mhttp[39m: GET /admin/users/me/permissions (12 ms) 200
+[2024-07-27 06:48:59.815] [32mhttp[39m: GET /content-type-builder/components (9 ms) 200
+[2024-07-27 06:48:59.824] [32mhttp[39m: GET /content-type-builder/content-types (7 ms) 200
+[2024-07-27 06:48:59.832] [32mhttp[39m: GET /content-type-builder/reserved-names (6 ms) 200
+[2024-07-27 06:49:43.312] [32minfo[39m: File created: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\category\controllers\category.js
+[2024-07-27 06:49:43.315] [32minfo[39m: File created: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\category\content-types\category\schema.json
+[2024-07-27 06:49:43.320] [32minfo[39m: File created: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\category\services\category.js
+[2024-07-27 06:49:43.325] [32minfo[39m: File changed: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\restaurant\content-types\restaurant\schema.json
+[2024-07-27 06:49:43.327] [32minfo[39m: File changed: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\category\content-types\category\schema.json
+[2024-07-27 06:49:43.328] [32minfo[39m: File created: C:\Users\markg\Data Engineering\Module10-SE\strapi-cloud-template-blog-88474366b4\src\api\category\routes\category.js
+[2024-07-27 06:49:43.328] [32mhttp[39m: POST /content-type-builder/content-types (651 ms) 201
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Jul 27 2024 06:49:46 GMT-0400 (Eastern Dayl… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1713 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 6928                                             [90m│[39m
+[90m│[39m Version            [90m│[39m 4.21.1 (node v20.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To manage your project 🚀, go to the administration panel at:
+http://localhost:1337/admin
+
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2024-07-27 06:49:47.104] [32mhttp[39m: HEAD /_health (6 ms) 204
+[2024-07-27 06:49:47.131] [32mhttp[39m: GET /content-type-builder/content-types (20 ms) 200
+[2024-07-27 06:49:47.145] [32mhttp[39m: GET /content-type-builder/components (11 ms) 200
+[2024-07-27 06:49:47.155] [32mhttp[39m: GET /content-type-builder/reserved-names (8 ms) 200
+[2024-07-27 06:49:47.185] [32mhttp[39m: GET /admin/users/me/permissions (13 ms) 200
+[2024-07-27 06:49:47.213] [32mhttp[39m: GET /content-type-builder/components (8 ms) 200
+[2024-07-27 06:49:47.226] [32mhttp[39m: GET /content-type-builder/content-types (11 ms) 200
+[2024-07-27 06:49:47.234] [32mhttp[39m: GET /content-type-builder/reserved-names (6 ms) 200
+[2024-07-27 06:50:31.382] [32mhttp[39m: GET /content-manager/init (15 ms) 200
+[2024-07-27 06:50:31.426] [32mhttp[39m: GET /content-manager/content-types-settings (23 ms) 200
+[2024-07-27 06:50:31.454] [32mhttp[39m: GET /content-manager/content-types/api::category.category/configuration (12 ms) 200
+[2024-07-27 06:50:31.500] [32mhttp[39m: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=Name:ASC (20 ms) 200

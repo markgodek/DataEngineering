@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Module10-SE/strapi-cloud-template-blog" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Module10-SE/strapi-cloud-template-blog-88474366b4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module11/Activity11.3/activity 11.3" vcs="Git" />
   </component>
 </project>

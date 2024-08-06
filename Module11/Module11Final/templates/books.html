@@ -1,0 +1,16 @@
+{% extends "index.html"%}
+
+{% block content  - add here %}
+
+        {% for book in books  - add here% } 
+            <tr>
+
+              <td>
+                <a href="http://localhost:5000/buybook?bookId={{book['id']}}">Buy</a>
+              </td>		
+            </<tr>	
+        {%endfor%}
+    </table>
+{% endblock %}
+    </table>
+{% endblock %}

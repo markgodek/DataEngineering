@@ -176,7 +176,7 @@ def buybook():
     user = session["username"]
 
     #add Cookie  booksToPurchase here
-    response = make_response('booksToPurchase')
+
 
     bookIdParam = request.args.get("bookId")
 
@@ -187,9 +187,9 @@ def buybook():
 
     
     ## set the cookie -  add code here
-    response.set_cookie('booksToPurchase',bookIdParam)
+    
 
-    return response
+    return response;
 
 
 if __name__ == "__main__":

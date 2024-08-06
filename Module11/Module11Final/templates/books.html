@@ -1,16 +1,39 @@
-{% extends "index.html"%}
+{% extends "index.html" %}
 
-{% block content  - add here %}
+{% block content %}
+    <!-- Add Bootstrap CSS if it's not already included in your base template -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-        {% for book in books  - add here% } 
-            <tr>
+    <!-- Table Container -->
+    <div class="container mt-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Author</th>
+                    <th>Country</th>
+                    <th>Language</th>
+                    <th>Pages</th>
+                    <th>Price</th>
+                    <th>Buy Link</th>
 
-              <td>
-                <a href="http://localhost:5000/buybook?bookId={{book['id']}}">Buy</a>
-              </td>		
-            </<tr>	
-        {%endfor%}
-    </table>
-{% endblock %}
-    </table>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                    <tr>
+                        <td>{{book['id']}}</td>
+                        <td>{{book['author']}}</td>
+                        <td>{{book['country']}}</td>
+                        <td>{{book['language']}}</td>
+                        <td>{{book['pages']}}</td>
+                        <td>{{book['price']}}</td>
+                        <td>
+                            <a href="http://localhost:5000/buybook?bookId={{ book['id'] }}" class="btn btn-primary">Buy</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

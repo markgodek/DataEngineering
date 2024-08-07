@@ -93,7 +93,6 @@ def checkUser(username, password):
             return True
     return False
 
-
 @app.route("/", methods=["GET"])
 def firstRoute():
     return render_template("register.html")
@@ -169,28 +168,36 @@ def addimage():
 
     return "all done"
 
+
 @app.route("/buybook")
 def buybook():
-    # get the book id parameter passed in the URL:
+    user = session['username']
+    booksToPurchase = []
 
-    user = session["username"]
-
-    #add Cookie  booksToPurchase here
-    response = make_response('booksToPurchase')
-
+    # Get items in the cart and the Id of the book clicked on the page
+    booksCookie = request.cookies.get('booksToPurchase')
     bookIdParam = request.args.get("bookId")
 
-    booksCookie = ""
+    # If there is a bookId
+    if bookIdParam:
+        if booksCookie: # if the cart was not empty, append the Id to the cart Id list
+            booksCookie += ',' + bookIdParam
+        else: # Start with the new book ID if cookie was empty
+            booksCookie = bookIdParam
 
-    ## initialize booksToPurchse with items in shopping cart (items in cookie)
-    booksCookie = request.cookies.get("booksToPurchase")
+    # Convert booksCookie to a list of book Ids
+    bookIdList = booksCookie.split(',')
 
-    
-    ## set the cookie -  add code here
-    response.set_cookie('booksToPurchase',bookIdParam)
+    # Populate booksToPurchase list based on book Ids
+    for bookId in bookIdList:
+        for book in books:
+            if int(book['id']) == int(bookId):
+                booksToPurchase.append(book)
 
+    response = make_response(render_template('buybook.html',username=user,
+                                             booksToPurchase=booksToPurchase))
+    response.set_cookie('booksToPurchase', booksCookie)
     return response
-
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

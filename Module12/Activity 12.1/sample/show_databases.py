@@ -5,7 +5,7 @@ import sys
 sys.dont_write_bytecode = True
 
 cnx = mysql.connector.connect(user='root', 
-    password='MyNewPass',
+    password='Best3tries!',
     host='127.0.0.1',
     database='',
     auth_plugin='mysql_native_password')

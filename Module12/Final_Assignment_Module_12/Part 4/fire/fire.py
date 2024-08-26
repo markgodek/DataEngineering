@@ -8,31 +8,31 @@ cred = credentials.Certificate('serviceAccountKey.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://demond-18d8e-default-rtdb.firebaseio.com/'
+    'databaseURL': 'https://assignment-module12-f6d31-default-rtdb.firebaseio.com/'
 })
 
 # save data
-ref = db.reference('py/')
-users_ref = ref.child('users')
-users_ref.set({
-    'alanisawesome': {
-        'date_of_birth': 'June 23, 1912',
-        'full_name': 'Alan Turing'
+ref = db.reference('database/')
+pres_ref = ref.child('presidents')
+pres_ref.set({
+    'first': {
+        'date_of_birth': 'February 22, 1732',
+        'full_name': 'George Washington'
     },
-    'gracehop': {
-        'date_of_birth': 'December 9, 1906',
-        'full_name': 'Grace Hopper'
+    'second': {
+        'date_of_birth': 'October 30, 1735',
+        'full_name': 'John Adams'
     }
 })
 
 # update data
-hopper_ref = users_ref.child('gracehop')
+hopper_ref = pres_ref.child('second')
 hopper_ref.update({
-    'nickname': 'Amazing Grace'
+    'occupation': 'Attorney'
 })
 
 # read data
-handle = db.reference('py/users/alanisawesome')
+handle = db.reference('database/presidents/first')
 
 # Read the data at the posts reference (this is a blocking operation)
 print(ref.get())

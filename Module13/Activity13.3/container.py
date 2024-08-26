@@ -32,7 +32,7 @@ def create(cmd, db):
 # initialize mysql db
 def init_mysql():
     cnx = pymysql.connect(user='root',
-        password='MyNewPass',
+        password='Best3tries!',
         host='127.0.0.1')
 
     # create cursor

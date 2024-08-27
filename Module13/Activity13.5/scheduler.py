@@ -3,8 +3,7 @@ import time
 import mysqldb
 import mongodb
 import redisdb
-# Uncomment code below for Activity 13.5
-# import cassandradb
+import cassandradb
 import sys
 
 # delete data in all dbs
@@ -12,7 +11,7 @@ def clearout():
     mysqldb.delete()
     mongodb.delete()
     redisdb.delete()
-    # call "cassandradb.delete()" for Activity 13.5
+    cassandradb.delete()
     print('Deleted data in all dbs!')
 
 # read input argument
@@ -46,23 +45,24 @@ def redis():
     stamps = mysqldb.read();
     redisdb.write(stamps)
 
-# create function cassandra() for Activity 13.5:
-#def cassandra()
-
+def cassandra():
+    stamps = mysqldb.read()
+    cassandradb.write(stamps)
 
 def verify():
     stamps = mongodb.read()
     status(stamps,'mongo')
     lastInsertDate = redisdb.read()
     print(f'Data in Redis: LastInsertDate = {lastInsertDate.decode("utf-8")}')
-    # call cassandradb.read() for Activity 13.5 print results
+    lastUpdateDate = cassandradb.read()
+    print(f'Data in Cassandra: LastUpdateDate = {lastUpdateDate}')
 
 def timeloop():
     print(f'--- LOOP: ' + time.ctime() + ' ---')
     mysql()
     mongo()
     redis()
-    # call function cassandra() for Activity 13.5
+    cassandra()
     verify()
     Timer(5, timeloop).start()
 

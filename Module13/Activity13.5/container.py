@@ -1,8 +1,7 @@
 import os
 import sys
 import pymysql
-# uncomment code below for Activity 13.5
-#from cassandra.cluster import Cluster
+from cassandra.cluster import Cluster
 
 # ----------------
 # input arguments
@@ -25,9 +24,6 @@ def create(cmd, db):
     result = os.system(cmd)
     if (result == 0):
         print(f'Created {db}')
-
-# add init_cassandra() below for Activity 13.5
-
 
 # initialize mysql db
 def init_mysql():
@@ -64,6 +60,27 @@ def init_mysql():
     cursor.close()
     cnx.close()
 
+# initialize cassandra db
+def init_cassandra():
+    keyspace = None
+    cluster = Cluster(['localhost'], port=9042)
+    session = cluster.connect(keyspace)
+
+    session.execute("""
+        CREATE KEYSPACE IF NOT EXISTS stamps
+        WITH REPLICATION = {'class':'SimpleStrategy','replication_factor' :1};
+        """)
+
+    session.set_keyspace('stamps')
+    session.execute("""
+        CREATE TABLE IF NOT EXISTS posts (
+            id text  PRIMARY KEY,
+            stamp text
+        );
+        """)
+
+    session.execute(f"insert into posts (id, stamp) values ('maxTimeStamp', '1975-01-01 00:00:00') IF NOT EXISTS")
+
 # read input argument
 argument = len(sys.argv)
 if (argument > 1):
@@ -74,7 +91,7 @@ if(argument == '-delete'):
     delete('some-mysql')
     delete('some-mongo')
     delete('some-redis')
-    # Add code to delete "some-cassandra" for Cassandra database container for Activity 13.5
+    delete('some-cassandra')
     sys.exit()
 
 # if -create input argument, create containers
@@ -82,12 +99,11 @@ if(argument == '-create'):
     create('docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=Best3tries! -d mysql', 'mysql')
     create('docker run -p 27017:27017 --name some-mongo -d mongo', 'mongo')
     create('docker run -p 6379:6379 --name some-redis -d redis', 'redis')
-    # Add code to create the Cassandra database for Activity 13.5
+    create('docker run -p 9042:9042 --name some-cassandra -d cassandra', 'cassandra')
     sys.exit()
 
 # if -init, init mysql, mongodb does not need it
 if(argument == '-init'):
     init_mysql()
-    # Add call to init_cassandra() to initialize the Cassandra database container. Activity 13.5.
+    init_cassandra()
     sys.exit()
-

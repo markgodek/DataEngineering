@@ -73,7 +73,7 @@ if (argument > 1):
 if(argument == '-delete'):
     delete('some-mysql')
     delete('some-mongo')
-    # Add code to delete "some-redis" for Redis database container for Activity 13.4
+    delete('some-redis')
     # Add code to delete "some-cassandra" for Cassandra database container for Activity 13.5
     sys.exit()
 
@@ -81,7 +81,7 @@ if(argument == '-delete'):
 if(argument == '-create'):
     create('docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=Best3tries! -d mysql', 'mysql')
     create('docker run -p 27017:27017 --name some-mongo -d mongo', 'mongo')
-    # Add code to create the Redis database for Activity 13.4
+    create('docker run -p 6379:6379 --name some-redis -d redis', 'redis')
     # Add code to create the Cassandra database for Activity 13.5
     sys.exit()
 

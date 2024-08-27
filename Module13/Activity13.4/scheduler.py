@@ -2,8 +2,7 @@ from threading import Timer
 import time
 import mysqldb
 import mongodb
-# Uncomment code below for Activity 13.4
-#import redisdb
+import redisdb
 # Uncomment code below for Activity 13.5
 # import cassandradb
 import sys
@@ -12,7 +11,7 @@ import sys
 def clearout():
     mysqldb.delete()
     mongodb.delete()
-    # call "redisdb.delete()" for Activity 13.4
+    redisdb.delete()
     # call "cassandradb.delete()" for Activity 13.5
     print('Deleted data in all dbs!')
 
@@ -43,9 +42,9 @@ def mongo():
     stamps = mysqldb.read()
     status(stamps,'mysql')
     mongodb.write(stamps)
-
-# create function redis() for Activity 13.4:
-#def redis()
+def redis():
+    stamps = mysqldb.read();
+    redisdb.write(stamps)
 
 # create function cassandra() for Activity 13.5:
 #def cassandra()
@@ -54,14 +53,15 @@ def mongo():
 def verify():
     stamps = mongodb.read()
     status(stamps,'mongo')
-    # call redisdb.read() for Activity 13.4 print results
+    lastInsertDate = redisdb.read()
+    print(f'Data in Redis: LastInsertDate = {lastInsertDate.decode("utf-8")}')
     # call cassandradb.read() for Activity 13.5 print results
 
 def timeloop():
     print(f'--- LOOP: ' + time.ctime() + ' ---')
     mysql()
     mongo()
-    # call function redis() for Activity 13.4
+    redis()
     # call function cassandra() for Activity 13.5
     verify()
     Timer(5, timeloop).start()

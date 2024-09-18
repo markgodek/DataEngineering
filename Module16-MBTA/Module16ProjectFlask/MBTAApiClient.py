@@ -17,6 +17,7 @@ def callMBTAApi():
             busDict['speed'] = bus['attributes']['speed']
             busDict['updated_at'] = bus['attributes']['updated_at']
             busDict['direction'] = bus['attributes']['direction_id']
+            busDict['current_stop_sequence'] = bus['attributes']['current_stop_sequence']
             mbtaDictList.append(busDict)
     mysqldb.insertMBTARecord(mbtaDictList)
 

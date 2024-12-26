@@ -10,17 +10,40 @@ import time
 import glob, os
 import json
 
+def store_json(data, file):
+    with open(file, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+        print('wrote file: ' + file)
+
 def catalog():
 
     def pull(url):
-        response = urllib.request.urlopen(url).read()
-        data = response.decode('utf-8')
-        return data
+        try:
+            response = urllib.request.urlopen(url).read()
+            data = response.decode('utf-8')
+            return data
+        except urllib.error.HTTPError as e:
+            if e.code == 404:  # If the error is a 404, print and skip
+                print(f"HTTPError 404 for URL: {url} - Page not found. Skipping...")
+                return None  # Return None to signal failure
+            else:
+                # For other HTTP errors, log the error and return None
+                print(f"HTTPError for URL: {url} - {e.code} {e.reason}")
+                return None
+        except urllib.error.URLError as e:
+            print(f"URLError for URL: {url} - {e.reason}. Skipping...")
+            return None  # Return None for URL errors
+        except Exception as e:
+            print(f"Unexpected error for URL: {url} - {str(e)}. Skipping...")
+            return None  # Catch any other unexpected exceptions
 
-    def store(data,file):
-        with open(file, 'w') as out:
-            out.write(data)
-            print('wrote file: ' + file)
+    def store(data, file):
+        if data:  # Only store data if it is not None
+            with open(file, 'w') as out:
+                out.write(data)
+                print(f'Wrote file: {file}')
+        else:
+            print(f"Skipping {file} due to missing data.")
 
     urls = [
         "http://student.mit.edu/catalog/m1a.html",
@@ -85,7 +108,107 @@ def catalog():
         print(file)
         store(data, file)
 
-catalog()
+def combine():
 
-# step 5 here
-#https://classroom.emeritus.org/courses/9296/assignments/218600?module_item_id=1556656
+    with open('combo.txt', 'w') as outfile:
+        for file in glob.glob('*.html'):
+            with open(file, 'r') as infile:
+                outfile.write(infile.read())
+
+def titles():
+    from bs4 import BeautifulSoup
+
+    with open('combo.txt','r') as infile:
+        html = infile.read()
+
+        html = html.replace('\n', ' ').replace('\r', '')
+        # the following create an html parser
+        soup = BeautifulSoup(html, "html.parser")
+        results = soup.find_all('h3')
+        titles = []
+
+        # tag inner text
+        for item in results:
+            titles.append(item.text)
+        store_json(titles, 'titles.json')
+
+def clean():
+
+   with open('titles.json') as file:
+       titles = json.load(file)
+       # remove punctuation/numbers
+       for index, title in enumerate(titles):
+           punctuation= '''!()-[]{};:'"\,<>./?@#$%^&*_~1234567890'''
+           translationTable= str.maketrans("","",punctuation)
+           clean = title.translate(translationTable)
+           titles[index] = clean
+
+       # remove one character words
+       for index, title in enumerate(titles):
+           clean = ' '.join( [word for word in title.split() if len(word)>1] )
+           titles[index] = clean
+
+       store_json(titles, 'titles_clean.json')
+
+def count_words():
+    from collections import Counter
+    with open('titles_clean.json') as file:
+        titles = json.load(file)
+        words = []
+
+        # extract words and flatten
+        for title in titles:
+            words.extend(title.split())
+
+        # count word frequency
+        counts = Counter(words)
+        store_json(counts, 'words.json')
+
+with DAG(
+   "assignment",
+   start_date=days_ago(1),
+   schedule_interval="@daily",
+   catchup=False,
+) as dag:
+    # INSTALL BS4 BY HAND THEN CALL FUNCTION
+
+    # ts are tasks
+    t0 = BashOperator(
+        task_id='task_zero',
+        bash_command='pip install beautifulsoup4',
+        retries=2
+    )
+    t1 = PythonOperator(
+        task_id='task_one',
+        depends_on_past=False,
+        python_callable=catalog
+    )
+    t2 = PythonOperator(
+        task_id='task_two',
+        depends_on_past=False,
+        python_callable=combine
+    )
+    t3 = PythonOperator(
+        task_id='task_three',
+        depends_on_past=False,
+        python_callable=titles
+    )
+    t4 = PythonOperator(
+        task_id='task_four',
+        depends_on_past=False,
+        python_callable=clean
+    )
+    t5 = PythonOperator(
+        task_id='task_five',
+        depends_on_past=False,
+        python_callable=count_words
+    )
+
+    # Task Dependencies (execution order)
+    t0 >> t1 >> t2 >> t3 >> t4 >> t5
+
+#catalog()
+#combine()
+#titles()
+#clean()
+#count_words()

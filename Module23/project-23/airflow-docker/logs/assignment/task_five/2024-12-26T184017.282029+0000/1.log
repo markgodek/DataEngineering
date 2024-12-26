@@ -1,0 +1,24 @@
+[2024-12-26 18:42:22,740] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_five 2024-12-26T18:40:17.282029+00:00 [None]>
+[2024-12-26 18:42:22,756] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_five 2024-12-26T18:40:17.282029+00:00 [None]>
+[2024-12-26 18:42:22,756] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2024-12-26 18:42:22,757] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2024-12-26 18:42:22,757] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2024-12-26 18:42:22,766] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): task_five> on 2024-12-26T18:40:17.282029+00:00
+[2024-12-26 18:42:22,769] {standard_task_runner.py:52} INFO - Started process 1124 to run task
+[2024-12-26 18:42:22,771] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'assignment', 'task_five', '2024-12-26T18:40:17.282029+00:00', '--job-id', '35', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment.py', '--cfg-path', '/tmp/tmpd69c00vp', '--error-file', '/tmp/tmptwz3xa6i']
+[2024-12-26 18:42:22,772] {standard_task_runner.py:77} INFO - Job 35: Subtask task_five
+[2024-12-26 18:42:22,805] {logging_mixin.py:104} INFO - Running <TaskInstance: assignment.task_five 2024-12-26T18:40:17.282029+00:00 [running]> on host d88713c29571
+[2024-12-26 18:42:22,847] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=assignment
+AIRFLOW_CTX_TASK_ID=task_five
+AIRFLOW_CTX_EXECUTION_DATE=2024-12-26T18:40:17.282029+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-12-26T18:40:17.282029+00:00
+[2024-12-26 18:42:22,852] {logging_mixin.py:104} INFO - wrote file: words.json
+[2024-12-26 18:42:22,853] {python.py:151} INFO - Done. Returned value was: None
+[2024-12-26 18:42:22,865] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=assignment, task_id=task_five, execution_date=20241226T184017, start_date=20241226T184222, end_date=20241226T184222
+[2024-12-26 18:42:22,884] {taskinstance.py:1265} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-26 18:42:22,906] {local_task_job.py:151} INFO - Task exited with return code 0
+[2024-12-26 18:42:22,926] {dagrun.py:444} INFO - Marking run <DagRun assignment @ 2024-12-26 18:40:17.282029+00:00: manual__2024-12-26T18:40:17.282029+00:00, externally triggered: True> successful

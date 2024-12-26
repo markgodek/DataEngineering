@@ -1,0 +1,86 @@
+[2024-12-26 18:07:41,654] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_one 2024-12-26T16:26:00.327720+00:00 [up_for_retry]>
+[2024-12-26 18:07:41,665] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_one 2024-12-26T16:26:00.327720+00:00 [up_for_retry]>
+[2024-12-26 18:07:41,665] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2024-12-26 18:07:41,666] {taskinstance.py:1088} INFO - Starting attempt 2 of 3
+[2024-12-26 18:07:41,667] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2024-12-26 18:07:41,677] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): task_one> on 2024-12-26T16:26:00.327720+00:00
+[2024-12-26 18:07:41,681] {standard_task_runner.py:52} INFO - Started process 9127 to run task
+[2024-12-26 18:07:41,683] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'assignment', 'task_one', '2024-12-26T16:26:00.327720+00:00', '--job-id', '22', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment.py', '--cfg-path', '/tmp/tmp8lm6lv96', '--error-file', '/tmp/tmpe5tb4zmc']
+[2024-12-26 18:07:41,684] {standard_task_runner.py:77} INFO - Job 22: Subtask task_one
+[2024-12-26 18:07:41,716] {logging_mixin.py:104} INFO - Running <TaskInstance: assignment.task_one 2024-12-26T16:26:00.327720+00:00 [running]> on host d88713c29571
+[2024-12-26 18:07:41,749] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=assignment
+AIRFLOW_CTX_TASK_ID=task_one
+AIRFLOW_CTX_EXECUTION_DATE=2024-12-26T16:26:00.327720+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-12-26T16:26:00.327720+00:00
+[2024-12-26 18:07:41,836] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m1a.html
+[2024-12-26 18:07:41,837] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:07:56,843] {logging_mixin.py:104} INFO - m1a.html
+[2024-12-26 18:07:56,844] {logging_mixin.py:104} INFO - Wrote file: m1a.html
+[2024-12-26 18:07:56,891] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m1b.html
+[2024-12-26 18:07:56,891] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:08:11,896] {logging_mixin.py:104} INFO - m1b.html
+[2024-12-26 18:08:11,897] {logging_mixin.py:104} INFO - Wrote file: m1b.html
+[2024-12-26 18:08:11,975] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m1c.html
+[2024-12-26 18:08:11,975] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:08:26,990] {logging_mixin.py:104} INFO - m1c.html
+[2024-12-26 18:08:26,991] {logging_mixin.py:104} INFO - Wrote file: m1c.html
+[2024-12-26 18:08:27,049] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m2a.html
+[2024-12-26 18:08:27,049] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:08:42,053] {logging_mixin.py:104} INFO - m2a.html
+[2024-12-26 18:08:42,054] {logging_mixin.py:104} INFO - Wrote file: m2a.html
+[2024-12-26 18:08:42,135] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m2b.html
+[2024-12-26 18:08:42,135] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:08:57,140] {logging_mixin.py:104} INFO - m2b.html
+[2024-12-26 18:08:57,141] {logging_mixin.py:104} INFO - Wrote file: m2b.html
+[2024-12-26 18:08:57,195] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m2c.html
+[2024-12-26 18:08:57,195] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:09:12,211] {logging_mixin.py:104} INFO - m2c.html
+[2024-12-26 18:09:12,212] {logging_mixin.py:104} INFO - Wrote file: m2c.html
+[2024-12-26 18:09:12,295] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m3a.html
+[2024-12-26 18:09:12,296] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:09:27,308] {logging_mixin.py:104} INFO - m3a.html
+[2024-12-26 18:09:27,309] {logging_mixin.py:104} INFO - Wrote file: m3a.html
+[2024-12-26 18:09:27,360] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m3b.html
+[2024-12-26 18:09:27,360] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:09:42,372] {logging_mixin.py:104} INFO - m3b.html
+[2024-12-26 18:09:42,374] {logging_mixin.py:104} INFO - Wrote file: m3b.html
+[2024-12-26 18:09:42,450] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m4a.html
+[2024-12-26 18:09:42,450] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:09:57,464] {logging_mixin.py:104} INFO - m4a.html
+[2024-12-26 18:09:57,465] {logging_mixin.py:104} INFO - Wrote file: m4a.html
+[2024-12-26 18:09:57,509] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m4b.html
+[2024-12-26 18:09:57,510] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:10:12,525] {logging_mixin.py:104} INFO - m4b.html
+[2024-12-26 18:10:12,527] {logging_mixin.py:104} INFO - Wrote file: m4b.html
+[2024-12-26 18:10:12,601] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m4c.html
+[2024-12-26 18:10:12,601] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:10:27,615] {logging_mixin.py:104} INFO - m4c.html
+[2024-12-26 18:10:27,616] {logging_mixin.py:104} INFO - Wrote file: m4c.html
+[2024-12-26 18:10:27,684] {logging_mixin.py:104} INFO - pulled: http://student.mit.edu/catalog/m4d.html
+[2024-12-26 18:10:27,684] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-12-26 18:10:32,717] {local_task_job.py:199} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2024-12-26 18:10:32,719] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 9127
+[2024-12-26 18:10:32,720] {taskinstance.py:1284} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-26 18:10:32,726] {taskinstance.py:1501} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1157, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1331, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1356, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/assignment.py", line 102, in catalog
+    time.sleep(15)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1286, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-12-26 18:10:32,737] {taskinstance.py:1551} INFO - Marking task as FAILED. dag_id=assignment, task_id=task_one, execution_date=20241226T162600, start_date=20241226T180741, end_date=20241226T181032
+[2024-12-26 18:10:32,772] {process_utils.py:66} INFO - Process psutil.Process(pid=9127, status='terminated', exitcode=1, started='18:07:41') (9127) terminated with exit code 1

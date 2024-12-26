@@ -18,6 +18,9 @@ function graph(){
     var circle = [];
     var force;
 
+
+
+
     var svg = d3.select("div[id=target]").append("svg")
         .attr("width", 1920)
         .attr("height", 960)

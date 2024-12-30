@@ -1,0 +1,5 @@
+user: sysadmin@thingsboard.org
+pass: sysadmin
+
+user: tenant@thingsboard.org
+pass: tenant

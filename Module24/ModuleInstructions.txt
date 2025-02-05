@@ -1,0 +1,9 @@
+1. Run docker compose up on yml file in DataEngineering\Module24\DockerMosquittoInstall\Mosquitto 
+2. With mosquitto image running in Docker, run pahopublish.py
+3. Run pahosubscribe.py
+4. Run pahopublish.py again (By default it stopped after generating 100 entries the first time we ran it)
+5. Go to https://console.firebase.google.com/ and create a new project and a realtime database within the new project
+6. Enable test mode if you are creating a new database. Otherwise, set read and write to true in the Rules tab
+7. Add a key-value pair in the Data tab, like "Temperature" and 0
+8. Run docker compose up on yml file in DataEngineering\Module24\Kafka
+9.

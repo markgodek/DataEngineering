@@ -7,3 +7,14 @@
 7. Add a key-value pair in the Data tab, like "Temperature" and 0
 8. Run docker compose up on yml file in DataEngineering\Module24\Kafka
 9.
+
+
+Login: tenant@thingsboard.org
+Password: tenant
+
+
+Kafka section:
+
+npm install express
+
+npm install node-rdkafka

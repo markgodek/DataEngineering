@@ -8,7 +8,8 @@ ACCESS_TOKEN = 'DHT11_DEMO_TOKEN'
 
 # Data capture and upload interval in seconds.
 
-sensor_data = {'temperature': 0}
+sensor_data = {'temperature': 0,
+               'humidity': 0}
 
 client = mqtt.Client()
 # Set access token
@@ -20,7 +21,8 @@ client.loop_start()
 
 try:
     while True:
-        temperature = random.randint(0, 100)
+        temperature = random.randint(70, 100)
+        humidity = random.randint(50, 100)
         
         print(f"Temperature: {temperature} humidity: {humidity}")
         sensor_data['temperature'] = temperature
